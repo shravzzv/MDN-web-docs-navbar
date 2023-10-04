@@ -70,8 +70,7 @@ a {
   color: var(--txt-clr);
 }
 
-.hamburger:hover + ul li,
-ul:hover li {
+ul.active li {
   display: block;
 }
 
