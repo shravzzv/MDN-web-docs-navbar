@@ -176,3 +176,9 @@ ul.active li {
     font-size: 0.75rem;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  .dropdown > li:hover {
+    background-color: rgb(58, 57, 57);
+  }
+}
