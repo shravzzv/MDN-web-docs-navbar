@@ -67,7 +67,7 @@ li {
 }
 
 a {
-  color: var(--txt-clr);
+  color: inherit;
 }
 
 ul.active li {
@@ -97,7 +97,18 @@ ul.active li {
   }
 
   li {
-    display: block;
+    display: inline-block;
     border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  li:hover {
+    color: #d00058;
+    background-color: #ffd5e4;
+  }
+
+  li:last-of-type {
+    margin-left: auto;
   }
 }
