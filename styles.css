@@ -168,6 +168,7 @@ ul.active li {
   .dropdown .heading {
     font-size: 1rem;
     margin-bottom: 0.5em;
+    font-weight: 500;
   }
 
   .dropdown .sub {
