@@ -74,6 +74,10 @@ ul.active li {
   display: block;
 }
 
+.dropdown {
+  display: none;
+}
+
 @media screen and (min-width: 768px) {
   nav {
     border: 1px solid lightgray;
@@ -101,6 +105,7 @@ ul.active li {
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    position: relative;
   }
 
   li:hover {
@@ -110,5 +115,64 @@ ul.active li {
 
   li:last-of-type {
     margin-left: auto;
+  }
+
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+      rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 10px;
+    background-color: var(--bg-clr);
+    color: var(--txt-clr);
+  }
+
+  li:hover > .dropdown {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5em;
+    margin: 0;
+    width: max-content;
+  }
+
+  .dropdown > li {
+    margin: 0;
+    padding: 1em;
+    width: 100%;
+    color: var(--txt-clr);
+    background-color: var(--bg-clr);
+  }
+
+  .dropdown > li::before {
+    content: '';
+    position: absolute;
+    left: 1%;
+    top: 25%;
+    height: 50%;
+    width: 3px;
+    background-color: orange; /* Color of the border */
+  }
+
+  .dropdown > li:hover {
+    background-color: rgb(226, 223, 223);
+  }
+
+  .dropdown p {
+    margin: 0;
+    font-size: 0.75rem;
+  }
+
+  .dropdown .heading {
+    font-size: 1rem;
+    margin-bottom: 0.5em;
+    font-weight: 500;
+  }
+
+  .dropdown .sub {
+    margin: 0;
+    font-size: 0.75rem;
   }
 }
