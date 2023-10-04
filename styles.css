@@ -75,4 +75,29 @@ ul.active li {
 }
 
 @media screen and (min-width: 768px) {
+  nav {
+    border: 1px solid lightgray;
+    padding: 0.5em;
+  }
+
+  .logo {
+    cursor: pointer;
+    max-width: 15%;
+    min-width: 180px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  ul {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  li {
+    display: block;
+    border: none;
+  }
 }
