@@ -1,5 +1,7 @@
 const trigger = document.querySelector('.hamburger')
 const target = document.querySelector('nav')
+const navItems = document.querySelectorAll('.navbar-item')
+const dropdownLinks = document.querySelectorAll('.dropdown-item a')
 
 const handleClick = (e) => {
   target.classList.toggle('active')
@@ -10,25 +12,23 @@ const handleClick = (e) => {
   }
 }
 
-trigger.addEventListener('click', handleClick)
-
 const handleNavItemClick = (e) => {
-  e.stopPropagation()
-  e.currentTarget.classList.toggle('active')
+  if (window.innerWidth <= 768) {
+    e.stopPropagation()
+    e.currentTarget.classList.toggle('active')
+  }
 }
 
 const handleDropdownLinkClick = (e) => {
-  e.preventDefault()
   e.stopPropagation()
 }
 
-const navItems = document.querySelectorAll('.navbar-item')
+trigger.addEventListener('click', handleClick)
 
 Array.from(navItems).forEach((navItem) =>
   navItem.addEventListener('click', handleNavItemClick)
 )
 
-const dropdownLinks = document.querySelectorAll('.dropdown-item a')
 Array.from(dropdownLinks).forEach((link) =>
   link.addEventListener('click', handleDropdownLinkClick)
 )
