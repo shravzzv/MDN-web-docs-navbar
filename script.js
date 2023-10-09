@@ -8,6 +8,7 @@ const handleClick = (e) => {
 trigger.addEventListener('click', handleClick)
 
 const handleNavItemClick = (e) => {
+  e.stopPropagation()
   e.currentTarget.classList.toggle('active')
 }
 
