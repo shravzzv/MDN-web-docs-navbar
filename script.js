@@ -6,3 +6,13 @@ const handleClick = (e) => {
 }
 
 trigger.addEventListener('click', handleClick)
+
+const handleNavItemClick = (e) => {
+  e.currentTarget.classList.toggle('active')
+}
+
+const navItems = document.querySelectorAll('.navbar-item')
+
+Array.from(navItems).forEach((navItem) =>
+  navItem.addEventListener('click', handleNavItemClick)
+)
