@@ -64,11 +64,12 @@ nav {
   top: 100%;
   left: 0;
   padding: 0 1em;
-  width: 100%;
   display: none;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   animation: dropdown 1000ms ease;
+  border-bottom: 1px solid #000;
+  width: 100%;
 }
 
 nav.active .navbar-list {
@@ -110,6 +111,20 @@ nav.active .navbar-list {
   background-color: orange;
 }
 
+.dropdown-arrow {
+  background-size: contain;
+  width: 1.5rem;
+  height: 1.5rem;
+  float: right;
+  padding-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+.navbar-item.active .dropdown-arrow {
+  transform: rotateX(180deg);
+  transform-origin: center;
+}
+
 .dropdown-sub {
   display: none;
 }
@@ -138,6 +153,9 @@ main {
     position: relative;
     display: flex;
     align-items: center;
+    border: none;
+    margin: 0;
+    width: 100%;
   }
 
   .navbar-item {
@@ -181,6 +199,11 @@ main {
     padding: 0.5em;
     margin: 0;
     width: max-content;
+  }
+
+  .navbar-item:hover .dropdown-arrow {
+    transform: rotateX(180deg);
+    transform-origin: center;
   }
 
   .dropdown-item {
