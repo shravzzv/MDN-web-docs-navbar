@@ -1,5 +1,5 @@
 const trigger = document.querySelector('.hamburger')
-const target = document.querySelector('ul')
+const target = document.querySelector('nav')
 
 const handleClick = (e) => {
   target.classList.toggle('active')

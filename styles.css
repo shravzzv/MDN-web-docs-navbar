@@ -56,6 +56,7 @@ nav {
 
 .hamburger {
   max-width: 10%;
+  cursor: pointer;
 }
 
 .navbar-list {
@@ -64,17 +65,24 @@ nav {
   left: 0;
   padding: 0 1em;
   width: 100%;
+  display: none;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  animation: dropdown 1000ms ease;
+}
+
+nav.active .navbar-list {
+  display: block;
+  background-color: whitesmoke;
 }
 
 .navbar-item {
   padding: 1em;
-  display: none;
   border-bottom: 1px solid #000;
 }
 
-.navbar-list.active .navbar-item {
-  display: block;
-  background-color: var(--bg-clr);
+.navbar-item:last-child {
+  border: none;
 }
 
 .dropdown-menu {
@@ -133,10 +141,10 @@ main {
     border-radius: 10px;
     background-color: var(--bg-clr);
     color: var(--txt-clr);
+    animation: dropdown 600ms ease;
   }
 
   .navbar-item:hover > .dropdown-menu {
-    display: block;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -188,5 +196,15 @@ main {
 @media (prefers-color-scheme: dark) {
   .dropdown-item:hover {
     background-color: rgb(58, 57, 57);
+  }
+}
+
+@keyframes dropdown {
+  from {
+    max-height: 0px;
+    overflow: hidden;
+  }
+  to {
+    max-height: 100vh;
   }
 }
