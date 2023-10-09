@@ -45,7 +45,9 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 1em;
-  position: relative;
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-clr);
 }
 
 .logo {
@@ -72,6 +74,7 @@ nav {
 
 .navbar-list.active .navbar-item {
   display: block;
+  background-color: var(--bg-clr);
 }
 
 .dropdown-menu {
