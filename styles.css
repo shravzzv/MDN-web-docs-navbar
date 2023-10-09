@@ -1,4 +1,6 @@
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -20,6 +22,13 @@ img {
 
 a {
   text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 body {
@@ -47,34 +56,25 @@ nav {
   max-width: 10%;
 }
 
-ul {
+.navbar-list {
   position: absolute;
   top: 100%;
   left: 0;
-  margin: 0;
   padding: 0 1em;
-  list-style-type: none;
   width: 100%;
 }
 
-li {
+.navbar-item {
   padding: 1em;
   display: none;
-}
-
-li {
   border-bottom: 1px solid #000;
 }
 
-a {
-  color: inherit;
-}
-
-ul.active li {
+.navbar-list.active .navbar-item {
   display: block;
 }
 
-.dropdown {
+.dropdown-menu {
   display: none;
 }
 
@@ -98,13 +98,13 @@ main {
     display: none;
   }
 
-  ul {
+  .navbar-list {
     position: relative;
     display: flex;
     align-items: center;
   }
 
-  li {
+  .navbar-item {
     display: inline-block;
     border: none;
     cursor: pointer;
@@ -112,16 +112,16 @@ main {
     position: relative;
   }
 
-  li:hover {
+  .navbar-item:hover {
     color: #d00058;
     background-color: #ffd5e4;
   }
 
-  li:last-of-type {
+  .navbar-item:last-of-type {
     margin-left: auto;
   }
 
-  .dropdown {
+  .dropdown-menu {
     position: absolute;
     top: 100%;
     left: 0;
@@ -132,7 +132,7 @@ main {
     color: var(--txt-clr);
   }
 
-  li:hover > .dropdown {
+  .navbar-item:hover > .dropdown-menu {
     display: block;
     display: flex;
     flex-direction: column;
@@ -142,47 +142,48 @@ main {
     width: max-content;
   }
 
-  .dropdown > li {
+  .dropdown-item {
     margin: 0;
     padding: 1em;
     width: 100%;
     color: var(--txt-clr);
     background-color: var(--bg-clr);
+    border-radius: 5px;
+    position: relative;
   }
 
-  .dropdown > li::before {
+  .dropdown-item::before {
     content: '';
     position: absolute;
     left: 1%;
     top: 25%;
     height: 50%;
     width: 3px;
-    background-color: orange; /* Color of the border */
+    background-color: orange;
   }
 
-  .dropdown > li:hover {
+  .dropdown-item:hover {
     background-color: rgb(226, 223, 223);
   }
 
-  .dropdown p {
+  .dropdown-heading,
+  .dropdown-sub {
     margin: 0;
-    font-size: 0.75rem;
   }
 
-  .dropdown .heading {
+  .dropdown-heading {
     font-size: 1rem;
     margin-bottom: 0.5em;
     font-weight: 500;
   }
 
-  .dropdown .sub {
-    margin: 0;
+  .dropdown-sub {
     font-size: 0.75rem;
   }
 }
 
 @media (prefers-color-scheme: dark) {
-  .dropdown > li:hover {
+  .dropdown-item:hover {
     background-color: rgb(58, 57, 57);
   }
 }

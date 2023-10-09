@@ -8,7 +8,7 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <nav>
+    <nav class="navbar">
       <div class="logo">
         <a href="#"
           ><img
@@ -21,134 +21,145 @@
         <img src="./images/hamburger.svg" alt="hamburger" />
       </div>
 
-      <ul>
-        <li>
-          <span>References</span>
-          <ul class="dropdown">
-            <li>
+      <ul class="navbar-list">
+        <li class="navbar-item">
+          <span class="navbar-heading">References</span>
+          <!-- References Dropdown -->
+          <ul class="dropdown-menu">
+            <li class="dropdown-item">
               <a href="#html">
-                <p class="heading">HTML</p>
-                <p class="sub">Learn to structure web content with HTML</p>
+                <p class="dropdown-heading">HTML</p>
+                <p class="dropdown-sub">
+                  Learn to structure web content with HTML
+                </p>
               </a>
             </li>
-            <li>
+            <li class="dropdown-item">
               <a href="#js">
-                <p class="heading">JavaScript</p>
-                <p class="sub">Learn to run scripts in the browser</p>
+                <p class="dropdown-heading">JavaScript</p>
+                <p class="dropdown-sub">Learn to run scripts in the browser</p>
               </a>
             </li>
-            <li>
+            <li class="dropdown-item">
               <a href="#css">
-                <p class="heading">CSS</p>
-                <p class="sub">Learn to style content using CSS</p>
+                <p class="dropdown-heading">CSS</p>
+                <p class="dropdown-sub">Learn to style content using CSS</p>
               </a>
             </li>
-            <li>
+            <li class="dropdown-item">
               <a href="#http">
-                <p class="heading">HTTP</p>
-                <p class="sub">Learn to style content using CSS</p>
+                <p class="dropdown-heading">HTTP</p>
+                <p class="dropdown-sub">Learn to style content using CSS</p>
               </a>
             </li>
-            <li>
+            <li class="dropdown-item">
               <a href="#webapi">
-                <p class="heading">Web APIs</p>
-                <p class="sub">Learn to structure web content with HTML</p>
+                <p class="dropdown-heading">Web APIs</p>
+                <p class="dropdown-sub">
+                  Learn to structure web content with HTML
+                </p>
               </a>
             </li>
-            <li>
+            <li class="dropdown-item">
               <a href="#webext">
-                <p class="heading">Web Extensions</p>
-                <p class="sub">Learn to style content using CSS</p>
+                <p class="dropdown-heading">Web Extensions</p>
+                <p class="dropdown-sub">Learn to style content using CSS</p>
               </a>
             </li>
-            <li>
+            <li class="dropdown-item">
               <a href="#webtech">
-                <p class="heading">Web Technologies</p>
-                <p class="sub">Learn to run scripts in the browser</p>
+                <p class="dropdown-heading">Web Technologies</p>
+                <p class="dropdown-sub">Learn to run scripts in the browser</p>
               </a>
             </li>
           </ul>
         </li>
-        <li>
-          <span>Guides</span>
-          <ul class="dropdown">
-            <li>
+
+        <li class="navbar-item">
+          <span class="navbar-heading">Guides</span>
+          <!-- Guides Dropdown -->
+          <ul class="dropdown-menu">
+            <li class="dropdown-item">
               <a href="#learningarea">
-                <p class="heading">MDN Learning Area</p>
-                <p class="sub">Learn web development</p>
+                <p class="dropdown-heading">MDN Learning Area</p>
+                <p class="dropdown-sub">Learn web development</p>
               </a>
             </li>
-            <li>
+            <li class="dropdown-item">
               <a href="#html">
-                <p class="heading">HTML</p>
-                <p class="sub">Learn to structure web content with HTML</p>
+                <p class="dropdown-heading">HTML Guides</p>
+                <p class="dropdown-sub">Explore in-depth HTML guides</p>
               </a>
             </li>
-            <li>
+            <li class="dropdown-item">
               <a href="#css">
-                <p class="heading">Collection</p>
-                <p class="sub">Learn to style content using CSS</p>
+                <p class="dropdown-heading">CSS Collection</p>
+                <p class="dropdown-sub">Explore CSS resources</p>
               </a>
             </li>
-            <li>
+            <li class="dropdown-item">
               <a href="#js">
-                <p class="heading">JavaScript</p>
-                <p class="sub">Learn to run scripts in the browser</p>
+                <p class="dropdown-heading">JavaScript Guides</p>
+                <p class="dropdown-sub">Explore advanced JavaScript topics</p>
               </a>
             </li>
-            <li>
-              <a href="#accessibliity">
-                <p class="heading">Accessibility</p>
-                <p class="sub">Learn to make the web accessible to all</p>
+            <li class="dropdown-item">
+              <a href="#accessibility">
+                <p class="dropdown-heading">Accessibility</p>
+                <p class="dropdown-sub">Learn to make the web accessible</p>
               </a>
             </li>
           </ul>
         </li>
-        <li>
-          <span>Plus</span>
-          <ul class="dropdown">
-            <li>
+
+        <li class="navbar-item">
+          <span class="navbar-heading">Plus</span>
+          <!-- Plus Dropdown -->
+          <ul class="dropdown-menu">
+            <li class="dropdown-item">
               <a href="#overview">
-                <p class="heading">Overview</p>
-                <p class="sub">A cusotmized MDN experience</p>
+                <p class="dropdown-heading">Overview</p>
+                <p class="dropdown-sub">A customized MDN experience</p>
               </a>
             </li>
-            <li>
+            <li class="dropdown-item">
               <a href="#aihelp">
-                <p class="heading">AI Help</p>
-                <p class="sub">Get real-time assistance and support</p>
+                <p class="dropdown-heading">AI Help</p>
+                <p class="dropdown-sub">Get real-time assistance and support</p>
               </a>
             </li>
-            <li>
+            <li class="dropdown-item">
               <a href="#collection">
-                <p class="heading">Collection</p>
-                <p class="sub">Your saved articles from across MDN</p>
+                <p class="dropdown-heading">Collection</p>
+                <p class="dropdown-sub">Your saved articles from MDN</p>
               </a>
             </li>
-            <li>
+            <li class="dropdown-item">
               <a href="#updates">
-                <p class="heading">Updates</p>
-                <p class="sub">All browser compatibility updates at a glance</p>
+                <p class="dropdown-heading">Updates</p>
+                <p class="dropdown-sub">Browser compatibility updates</p>
               </a>
             </li>
-            <li>
+            <li class="dropdown-item">
               <a href="#docs">
-                <p class="heading">Documentation</p>
-                <p class="sub">Learn how to use MDN Plus</p>
+                <p class="dropdown-heading">Documentation</p>
+                <p class="dropdown-sub">Learn how to use MDN Plus</p>
               </a>
             </li>
-            <li>
+            <li class="dropdown-item">
               <a href="#faq">
-                <p class="heading">FAQ</p>
-                <p class="sub">Frequently asked questions about MDN Plus</p>
+                <p class="dropdown-heading">FAQ</p>
+                <p class="dropdown-sub">Frequently asked questions</p>
               </a>
             </li>
           </ul>
         </li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#play">Play</a></li>
-        <li><a href="#ai">AI Help</a></li>
-        <li><a href="#account">johndoe@gmail.com</a></li>
+
+        <!-- Other Navbar Items -->
+        <li class="navbar-item"><a href="#blog">Blog</a></li>
+        <li class="navbar-item"><a href="#play">Play</a></li>
+        <li class="navbar-item"><a href="#ai">AI Help</a></li>
+        <li class="navbar-item"><a href="#account">johndoe@gmail.com</a></li>
       </ul>
     </nav>
     <main>
@@ -159,7 +170,7 @@
         et officiis eveniet, corporis, nesciunt optio doloribus quaerat magnam
         sapiente minus saepe reprehenderit sit necessitatibus sunt dolorum
         minima facere voluptate sequi? Officiis sit incidunt quaerat error illum
-        libero ad at vel aspernatur numquam nihil placeat facilis autem dicta,
+        libero ad at vel aspe«rnatur numquam nihil placeat facilis autem dicta,
         quidem corporis ipsam fugit sapiente voluptatibus aperiam eum. Sequi
         itaque, iste at numquam aliquam nobis? Tempore facilis repellat ullam
         fugit esse ducimus laboriosam quos, quas sint delectus distinctio omnis?
